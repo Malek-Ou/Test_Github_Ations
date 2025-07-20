@@ -9,9 +9,10 @@ on:
         options:
           - staging
           - production
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy application
-        run: echo "Deploying the application to ${{ input.environment }}"
+        run: echo "Deploying the application to ${{ github.event.inputs.environment }}"
